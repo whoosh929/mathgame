@@ -5,6 +5,7 @@ import { getRandomNumber, getRandomImage } from "../utils/randomizer.ts";
 function board() {
 	const imageURL: string = getRandomImage();
 
+	//todo: make row and length scaleable
 	return (
 		<table id="tableBoard">
 			<tbody>
@@ -12,7 +13,7 @@ function board() {
 					<tr key={row}>
 						{Array.from({ length: 4 }).map((_, col) => (
 							<td key={`${row}-${col}`}>
-								<Piece firstNum={getRandomNumber(0, 10)} secondNum={getRandomNumber(0, 10)} operator="plus" />
+								<Piece firstNum={getRandomNumber(1, 5)} secondNum={getRandomNumber(1, 5)} operator="multiply" />
 							</td>
 						))}
 					</tr>
