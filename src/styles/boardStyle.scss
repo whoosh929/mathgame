@@ -1,12 +1,12 @@
 //todo: randomize the image instead of it being statically coded in css
 $defaultBorderColor: white;
-$imgDirectory: "../assets/images/rainbow_cave.png";
+$imgDirectory: "../assets/images/vulture_bear.png";
 #tableBoard {
 	border-radius: 10px;
 	border: 10px solid $defaultBorderColor;
 	background-image: url($imgDirectory);
 	background-size: 100% 100%;
-	width: 70vw;
-	height: 70vh;
+	width: 80vw;
+	height: 80vh;
 	border-spacing: 0px;
 }

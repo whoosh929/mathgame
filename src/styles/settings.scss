@@ -1,3 +1,30 @@
 .settings {
 	padding-left: 20px;
+	top: 85vh;
+	position: absolute;
+}
+.numText {
+	width: 50px;
+}
+.headerText1 {
+	font-size: medium;
+	font-weight: bolder;
+}
+.settingTable {
+	vertical-align: middle;
+}
+
+.form-row {
+	display: flex;
+	gap: 20px; /* Space between elements */
+	align-items: flex-start;
+	vertical-align: middle;
+}
+
+.form-row label {
+	flex-shrink: 0; /* Prevents label from shrinking */
+}
+
+.form-row fieldset {
+	flex: 1; /* Each fieldset takes equal space */
 }

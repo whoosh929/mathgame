@@ -7,3 +7,9 @@ export type MathNumbers = {
 	secondNum: number;
 	operator?: string;
 };
+export type numberRanges = {
+	firstNumMin: number;
+	firstNumMax: number;
+	secondNumMin: number;
+	secondNumMax: number;
+};
