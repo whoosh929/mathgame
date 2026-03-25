@@ -1,12 +1,12 @@
 import Piece from "./Piece.tsx";
-import type { numberRanges } from "../constants/types.tsx";
+import type { boardProps } from "../constants/interface.tsx";
 import "../styles/boardStyle.css";
-import { getRandomNumber, getRandomImage } from "../utils/randomizer.ts";
+import { getRandomNumber } from "../utils/randomizer.ts";
 
-function board({ numbers }: { numbers: numberRanges }) {
-	//todo: make row and length scaleable
-	//<Piece firstNum={getRandomNumber(numbers.firstNumMin, numbers.firstNumMax)} secondNum={getRandomNumber(numbers.secondNumMin, numbers.secondNumMax)} operator="plus" />
-	//<Piece firstNum={getRandomNumber(1, 15)} secondNum={getRandomNumber(1, 15)} operator="plus" />
+function Board({ numbers, op }: boardProps) {
+	//todo: make row and length scaleable, make operator carry over as setting
+	console.log("Board entry - op:" + op);
+
 	return (
 		<table id="tableBoard">
 			<tbody>
@@ -17,7 +17,7 @@ function board({ numbers }: { numbers: numberRanges }) {
 								<Piece
 									firstNum={getRandomNumber(numbers.firstNumMin, numbers.firstNumMax)}
 									secondNum={getRandomNumber(numbers.secondNumMin, numbers.secondNumMax)}
-									operator="plus"
+									operator={op}
 								/>
 							</td>
 						))}
@@ -28,4 +28,4 @@ function board({ numbers }: { numbers: numberRanges }) {
 	);
 }
 
-export default board;
+export default Board;

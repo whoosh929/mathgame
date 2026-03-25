@@ -11,13 +11,16 @@ function App() {
 	const [firstNumMax, setFirstNumMax] = useState(10);
 	const [secondNumMin, setSecondNumMin] = useState(0);
 	const [secondNumMax, setSecondNumMax] = useState(10);
+	const [mathOperator, setMathOperator] = useState("plus");
 	const numberRange: numberRanges = { firstNumMin, firstNumMax, secondNumMin, secondNumMax };
 
-	function setNewNumbers(newNumbers: numberRanges): void {
+	function setNewNumbers(newNumbers: numberRanges, newOperator: string): void {
 		setFirstNumMin(newNumbers.firstNumMin);
 		setFirstNumMax(newNumbers.firstNumMax);
 		setSecondNumMin(newNumbers.secondNumMin);
 		setSecondNumMax(newNumbers.secondNumMax);
+
+		setMathOperator(newOperator);
 		console.log(
 			"setting numbers: [" +
 				newNumbers.firstNumMin +
@@ -29,6 +32,7 @@ function App() {
 				newNumbers.secondNumMax +
 				"]",
 		);
+		console.log("newOperator:" + newOperator);
 	}
 
 	return (
@@ -37,12 +41,12 @@ function App() {
 				<tbody>
 					<tr className="Board">
 						<td>
-							<Board numbers={numberRange} />
+							<Board numbers={numberRange} op={mathOperator} />
 						</td>
 					</tr>
 					<tr className="settings">
 						<td>
-							<Settings numbers={numberRange} setSettings={setNewNumbers} />
+							<Settings numbers={numberRange} setSettings={setNewNumbers} operator={mathOperator} />
 						</td>
 					</tr>
 				</tbody>

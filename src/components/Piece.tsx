@@ -41,8 +41,11 @@ function Piece({ firstNum, secondNum, operator = "plus" }: MathNumbers) {
 			<div className="piece">
 				<div className={`piece ${visible ? "show" : "hidden"}`}>
 					<span className="firstNum">{firstNum}</span>
-					<br /> {replaceOperators(operator)}
-					<span className="secondNum">{secondNum}</span> <br />
+					<br />
+					<span className="secondNum">
+						{replaceOperators(operator)} {secondNum}
+					</span>{" "}
+					<br />
 					<input
 						className={`answerTextbox ${focus ? "" : "highlight"}`}
 						type="text"

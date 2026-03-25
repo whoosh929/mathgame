@@ -7,5 +7,10 @@ export const operatorMap: { [key: string]: string } = {
 };
 export interface settingValues {
 	numbers: numberRanges;
-	setSettings: (newNumbers: numberRanges) => void;
+	setSettings: (newNumbers: numberRanges, newOp: string) => void;
+	operator: string;
+}
+export interface boardProps {
+	numbers: numberRanges;
+	op: string;
 }

@@ -4,11 +4,12 @@ import type { settingValues } from "../constants/interface";
 import { useState } from "react";
 import "../styles/settings.css";
 
-function settings({ numbers, setSettings }: settingValues) {
+function settings({ numbers, setSettings, operator }: settingValues) {
 	const [tempFirstNumMin, settempFirstNumMin] = useState(numbers.firstNumMin);
 	const [tempFirstNumMax, settempFirstNumMax] = useState(numbers.firstNumMax);
 	const [tempSecondNumMin, settempSecondNumMin] = useState(numbers.secondNumMin);
 	const [tempSecondNumMax, settempSecondNumMax] = useState(numbers.secondNumMax);
+	const [tempOp, setTempOp] = useState(operator);
 
 	function update() {
 		let temp: numberRanges = {
@@ -17,7 +18,9 @@ function settings({ numbers, setSettings }: settingValues) {
 			secondNumMin: tempSecondNumMin,
 			secondNumMax: tempSecondNumMax,
 		};
-		setSettings(temp);
+
+		setSettings(temp, tempOp);
+		console.log("tempOp:" + tempOp);
 	}
 
 	return (
@@ -25,10 +28,10 @@ function settings({ numbers, setSettings }: settingValues) {
 			<div className="form-row">
 				<label>
 					Mode:{" "}
-					<select>
-						<option>Plus</option>
-						<option>Minus</option>
-						<option>Multiply</option>
+					<select onChange={(e) => setTempOp(e.target.value)}>
+						<option value="plus">Plus</option>
+						<option value="minus">Minus</option>
+						<option value="multiply">Multiply</option>
 					</select>
 				</label>
 

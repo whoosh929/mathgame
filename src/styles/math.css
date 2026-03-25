@@ -1,5 +1,4 @@
 .piece {
-  border: 2px solid white;
   border-radius: 10px;
   border-spacing: 0px;
   text-align: center;
@@ -9,16 +8,19 @@
   justify-content: center;
   font-family: monospace;
   font-size: 50px;
+  position: relative;
 }
 
 .piece.show {
   opacity: 1;
   background-color: black;
+  border: 2px solid white;
 }
 
 .piece.hidden {
   opacity: 0;
   background-color: transparent;
+  border: 0px hidden;
 }
 
 @keyframes flashFade {
@@ -40,11 +42,21 @@
 }
 
 .firstNum {
-  padding-left: 42px;
+  display: flex;
+  width: 100px;
+  justify-content: right;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .secondNum {
-  padding-left: 10px;
+  display: flex;
+  width: 100px;
+  justify-content: right;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .piece.operator {
