@@ -43,7 +43,7 @@
 
 .firstNum {
   display: flex;
-  width: 100px;
+  width: 200px;
   justify-content: right;
   position: absolute;
   left: 50%;
@@ -52,7 +52,7 @@
 
 .secondNum {
   display: flex;
-  width: 100px;
+  width: 200px;
   justify-content: right;
   position: absolute;
   left: 50%;
