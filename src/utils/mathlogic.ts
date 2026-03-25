@@ -8,6 +8,8 @@ function getMathAnswer({ firstNum, secondNum, operator }: MathNumbers): number {
 			return firstNum - secondNum;
 		case "multiply":
 			return firstNum * secondNum;
+		case "divide":
+			return firstNum / secondNum;
 		default:
 			return 0;
 	}

@@ -32,6 +32,7 @@ function settings({ numbers, setSettings, operator }: settingValues) {
 						<option value="plus">Plus</option>
 						<option value="minus">Minus</option>
 						<option value="multiply">Multiply</option>
+						<option value="divide">Divide</option>
 					</select>
 				</label>
 

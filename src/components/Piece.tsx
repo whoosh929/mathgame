@@ -16,7 +16,7 @@ function Piece({ firstNum, secondNum, operator = "plus" }: MathNumbers) {
 	};
 
 	function replaceOperators(str: string): string {
-		return str.replace(/\b(plus|minus|multiply)\b/g, (match) => operatorMap[match]);
+		return str.replace(/\b(plus|minus|multiply|divide)\b/g, (match) => operatorMap[match]);
 	}
 
 	function toggleVisibility() {
