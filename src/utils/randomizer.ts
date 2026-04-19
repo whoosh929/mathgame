@@ -1,6 +1,10 @@
 function getRandomNumber(min: number, max: number): number {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+	let num = Math.floor(Math.random() * (max - min + 1)) + min;
+
+	return num;
 }
+
+//todo: getRandomImage still doesn't work
 function getRandomImage(): string {
 	const images = [
 		"C:\\Users\\kevin\\react projects\\mathGame\\src\\assets\\images\\bathing_marshmellow.png",
